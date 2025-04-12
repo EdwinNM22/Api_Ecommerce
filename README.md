@@ -16,6 +16,8 @@ La API está construida utilizando **Spring Boot** con **Java POO**.
 - POO (Programación Orientada a Objetos)
 - Maven
 - RESTful API
+- MySQL
+- JPA
 
 ---
 
