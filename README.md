@@ -34,3 +34,15 @@ La API está construida utilizando **Spring Boot** con **Java POO**.
 
 ## 👨‍🏫 Docente
 **Mario Enrique Palma Miranda**
+
+## ⚙️ Instrucciones de uso
+
+Antes de ejecutar el proyecto, asegúrese de configurar correctamente el archivo `application.properties` ubicado en:
+src/main/resources/application.properties
+
+Modifique las siguientes líneas según su entorno:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/NombreDB
+spring.datasource.username=YourName
+spring.datasource.password=YourPassword
