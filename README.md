@@ -1,6 +1,6 @@
 # 🛒 API REST - Ecommerce en Línea
 
-Este proyecto consiste en una **API REST** para un sistema de **Ecommerce en línea**, desarrollada como parte del parcial de la materia **Programación Orientada a Objetos**.  
+Este proyecto consiste en una **API REST** para un sistema de **Ecommerce en línea**, desarrollada como parte del parcial final del periodo 2 de la materia **Programación Orientada a Objetos**.  
 La API está construida utilizando **Spring Boot** con **Java POO**.
 
 ---
