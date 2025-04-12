@@ -37,7 +37,7 @@ La API está construida utilizando **Spring Boot** con **Java POO**.
 
 ## ⚙️ Instrucciones de uso
 
-Antes de ejecutar el proyecto, asegúrese de configurar su base de datos con los archivos query en /DbQuerys ubicado en la raiz del proyecto 
+Antes de ejecutar el proyecto, asegúrese de configurar su base de datos con los archivos query en `/DbQuerys` ubicado en la raiz del proyecto 
 
 El siguiente paso es configurar correctamente el archivo `application.properties` ubicado en: `src/main/resources/application.properties`  Modifique las siguientes líneas según su entorno:
 
