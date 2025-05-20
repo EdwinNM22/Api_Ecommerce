@@ -3,6 +3,7 @@ package scrum_master.com.e_commerce.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import scrum_master.com.e_commerce.DTO.InfoProductoDTO;
 import scrum_master.com.e_commerce.entities.ProductoEntity;
 
 import scrum_master.com.e_commerce.repository.ProductoRepository;
@@ -24,5 +25,10 @@ public class ProductoImpl implements ProductoService {
     @Override
     public ProductoEntity save(ProductoEntity producto) {
         return productoRepository.save(producto);
+    }
+
+    @Override
+    public List<InfoProductoDTO> obtenerInfoProductos() {
+        return productoRepository.obtenerInfoProductos();
     }
 }

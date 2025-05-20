@@ -4,6 +4,7 @@ package scrum_master.com.e_commerce.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+import scrum_master.com.e_commerce.DTO.InfoProductoDTO;
 import scrum_master.com.e_commerce.entities.ProductoEntity;
 import scrum_master.com.e_commerce.service.ProductoService;
 
@@ -28,4 +29,10 @@ public class ProductoController {
         return productoService.save(producto);
     }
 
+
+    @Transactional(readOnly = true)
+    @GetMapping("/info")
+    public List<InfoProductoDTO> getInfoProductosConEstadoStock() {
+        return productoService.obtenerInfoProductos();
+    }
 }

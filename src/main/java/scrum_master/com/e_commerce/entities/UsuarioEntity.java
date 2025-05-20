@@ -20,7 +20,6 @@ public class UsuarioEntity {
     private int idUsuario;
     private String nombre;
     private String correo;
-    @JsonIgnore
     private String password;
     private String Celular;
 
