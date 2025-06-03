@@ -11,9 +11,18 @@ public class ProductosController {
         return "homeproducto/productohome";
     }
 
-    @GetMapping("/index") // Redirige a la pagina principal/
-    public String mostrarIndex() {
-        return "home/index"; // nombre del archivo HTML dentro de templates/
+    @GetMapping("/create")
+    public String createproducto() {
+        return "createproducto/create";
     }
 
+    @GetMapping("/show")
+    public String show() {
+        return "showproducto/show";
+    }
+
+    @GetMapping("/edit")
+    public String vistaedit() {
+        return "editproducto/edit";
+    }
 }
