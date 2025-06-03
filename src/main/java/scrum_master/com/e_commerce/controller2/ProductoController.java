@@ -1,4 +1,4 @@
-package scrum_master.com.e_commerce.controller;
+package scrum_master.com.e_commerce.controller2;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import scrum_master.com.e_commerce.DTO.InfoProductoDTO;
 import scrum_master.com.e_commerce.DTO.Payload.ProductoMessage;
 import scrum_master.com.e_commerce.entities.ProductoEntity;
 import scrum_master.com.e_commerce.service.ProductoService;

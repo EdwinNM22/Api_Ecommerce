@@ -1,4 +1,4 @@
-package scrum_master.com.e_commerce.controller;
+package scrum_master.com.e_commerce.controller2;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
