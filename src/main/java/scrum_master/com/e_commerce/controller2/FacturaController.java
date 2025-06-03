@@ -1,10 +1,8 @@
-package scrum_master.com.e_commerce.controller;
+package scrum_master.com.e_commerce.controller2;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import scrum_master.com.e_commerce.entities.CategoriaEntity;
 import scrum_master.com.e_commerce.entities.FacturaEntity;
 import scrum_master.com.e_commerce.service.FacturaService;
 
