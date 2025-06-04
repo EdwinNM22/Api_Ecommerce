@@ -5,17 +5,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-@RequestMapping
+@RequestMapping("/usuario")
 public class LoginController {
 
     @GetMapping("/login")
     public String vistalogin() {
-        return "login/login";
+        return "usuario/login";
     }
 
     @GetMapping("/registro")
     public String vistaregistro() {
-        return "registro/registro";
+        return "usuario/registro";
+    }
+
+    @GetMapping("/edit")
+    public String vistaedit() {
+        return "usuario/edit";
     }
 }
 
