@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Panel de Tienda - Spring eCommerce</title>
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/heroic-features.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        nav.bg-dark, footer.bg-dark {
+            background-color: #343a40 !important;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #ffffff;
+            }
+
+            .navbar, .footer, .card {
+                background-color: #1e1e1e !important;
+            }
+
+            .card {
+                border: 1px solid #444;
+            }
+
+            .card-title,
+            .card-text,
+            .btn {
+                color: #ffffff;
+            }
+
+            .form-control {
+                background-color: #2a2a2a;
+                color: #ffffff;
+                border-color: #444;
+            }
+
+            .form-control::placeholder {
+                color: #bbb;
+            }
+
+            footer {
+                background-color: #1a1a1a !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/index">Spring Ecommerce</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/carrito">Carrito</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container mt-5">
+
+    <!-- Título y acciones de tienda -->
+    <div class="mt-4 mb-3">
+        <h1>Administrar Tienda</h1>
+
+        <!-- Botones de navegación -->
+        <div class="mb-3">
+            <a class="btn btn-outline-success mr-2" th:href="@{/create}">Crear Producto</a>
+            <a class="btn btn-outline-primary mr-2" th:href="@{/edit}">Editar Productos</a>
+            <a class="btn btn-outline-info" th:href="@{/show}">Ver Productos</a>
+        </div>
+
+        <form action="/admin/tienda/editar" method="POST" class="mb-3">
+            <div class="form-group">
+                <label for="nombreTienda">Nombre de la tienda:</label>
+                <input type="text" class="form-control" id="nombreTienda" name="nombre" value="Mi Tienda">
+            </div>
+            <div class="form-group">
+                <label for="descripcionTienda">Descripción:</label>
+                <textarea class="form-control" id="descripcionTienda" name="descripcion" rows="3">Descripción actual...</textarea>
+            </div>
+            <div class="form-group">
+                <label for="direccionTienda">Dirección:</label>
+                <input type="text" class="form-control" id="direccionTienda" name="direccion" placeholder="Ej. Av. Principal #123, Ciudad">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </form>
+    </div>
+
+    <!-- Lista de productos -->
+    <h3>Productos de la Tienda</h3>
+    <div class="row">
+        <!-- Producto individual -->
+        <div class="col-md-4 mb-4" id="producto-1">
+            <div class="card h-100">
+                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Producto 1</h4>
+                    <p class="card-text">Descripción corta del producto.</p>
+                    <p><strong>Precio:</strong> $10.00</p>
+                    <a href="/admin/producto/editar/1" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="/admin/producto/eliminar/1" class="btn btn-danger btn-sm">Eliminar</a>
+                </div>
+            </div>
+        </div>
+        <!-- Puedes duplicar esta tarjeta para más productos -->
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-4 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">© Spring eCommerce 2025</p>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

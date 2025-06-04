@@ -10,7 +10,78 @@
 
   <!-- Custom styles for this template -->
   <link href="/css/heroic-features.css" rel="stylesheet">
+
+  <style>
+    /* Estilos base (modo claro por defecto) */
+    body {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .navbar,
+    .footer-dark {
+      background-color: #343a40;
+    }
+
+    .card {
+      background-color: #ffffff;
+      color: #000000;
+      border: 1px solid #ddd;
+    }
+
+    .form-control {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    /* Modo oscuro automático */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      .navbar,
+      footer.bg-dark {
+        background-color: #1a1a1a !important;
+      }
+
+      .card {
+        background-color: #1e1e1e;
+        color: #ffffff;
+        border: 1px solid #444;
+      }
+
+      .form-control {
+        background-color: #2a2a2a;
+        color: #ffffff;
+        border-color: #555;
+      }
+
+      .form-control::placeholder {
+        color: #cccccc;
+      }
+
+      .btn-dark {
+        background-color: #28a745;
+        border-color: #28a745;
+        color: #fff;
+      }
+
+      .btn-dark:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+      }
+
+      .card-link {
+        color: #90caf9;
+      }
+    }
+  </style>
+
 </head>
+
+
 
 <body>
 

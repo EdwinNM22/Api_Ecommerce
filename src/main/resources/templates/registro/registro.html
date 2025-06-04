@@ -19,6 +19,8 @@
     body {
       display: flex;
       flex-direction: column;
+      background-color: #ffffff;
+      color: #000000;
     }
 
     main {
@@ -32,6 +34,51 @@
     .card {
       width: 100%;
       max-width: 500px;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    footer.bg-dark {
+      background-color: #343a40 !important;
+    }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      .navbar,
+      footer.bg-dark {
+        background-color: #1a1a1a !important;
+      }
+
+      .card {
+        background-color: #1e1e1e;
+        color: #ffffff;
+        border: 1px solid #444;
+      }
+
+      .form-control {
+        background-color: #2a2a2a;
+        color: #ffffff;
+        border-color: #555;
+      }
+
+      .form-control::placeholder {
+        color: #bbbbbb;
+      }
+
+      .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+      }
+
+      .btn-success:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+      }
     }
   </style>
 </head>
@@ -87,6 +134,11 @@
 
         <div class="text-center">
           <button type="submit" class="btn btn-success w-100">Guardar</button>
+
+          <div class="text-center mt-3">
+            <a href="/shopregistro" class="btn btn-outline-primary w-100">Registrar una Tienda</a>
+          </div>
+
         </div>
       </form>
     </div>

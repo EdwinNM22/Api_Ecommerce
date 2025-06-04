@@ -13,16 +13,16 @@ public class ProductosController {
 
     @GetMapping("/create")
     public String createproducto() {
-        return "createproducto/create";
+        return "productcrud/create";
     }
 
     @GetMapping("/show")
     public String show() {
-        return "showproducto/show";
+        return "productcrud/show";
     }
 
     @GetMapping("/edit")
     public String vistaedit() {
-        return "editproducto/edit";
+        return "productcrud/edit";
     }
 }

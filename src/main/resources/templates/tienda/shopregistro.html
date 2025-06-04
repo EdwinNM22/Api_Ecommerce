@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro de Tienda - Spring eCommerce</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/heroic-features.css" rel="stylesheet">
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 500px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        footer.bg-dark {
+            background-color: #343a40 !important;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #ffffff;
+            }
+
+            .navbar,
+            footer.bg-dark {
+                background-color: #1a1a1a !important;
+            }
+
+            .card {
+                background-color: #1e1e1e;
+                color: #ffffff;
+                border: 1px solid #444;
+            }
+
+            .form-control {
+                background-color: #2a2a2a;
+                color: #ffffff;
+                border-color: #555;
+            }
+
+            .form-control::placeholder {
+                color: #bbbbbb;
+            }
+
+            .btn-success {
+                background-color: #28a745;
+                border-color: #28a745;
+            }
+
+            .btn-success:hover {
+                background-color: #218838;
+                border-color: #1e7e34;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/index">Spring Ecommerce</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h2 class="text-center mb-4">Registro de Tienda</h2>
+
+            <form action="/registro-tienda" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre de la tienda:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Ej. Mi Tienda Online" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required placeholder="Breve descripción de la tienda"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" required placeholder="Ej. Calle Falsa 123, Ciudad" autocomplete="off">
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success w-100">Registrar Tienda</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="py-4 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">© Spring eCommerce 2025</p>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
