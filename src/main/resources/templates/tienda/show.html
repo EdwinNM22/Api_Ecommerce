@@ -154,23 +154,22 @@
 <div class="container" style="margin-top: 100px;">
   <!-- Page Heading/Breadcrumbs -->
   <h1 class="mt-4 mb-3">
-    Spring eCommerce <small>Productos</small>
+    Tiendas <small></small>
   </h1>
 
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/index">Home</a></li>
-    <li class="breadcrumb-item active">Ver Productos</li>
+    <li class="breadcrumb-item active">Tiendas</li>
   </ol>
 
-  <a class="btn btn-primary mb-3" href="/tienda/create">Crear Producto</a>
-  <h2>Productos</h2>
+  <a class="btn btn-primary mb-3" href="/tienda/create">Crear nueva tienda</a>
+  <h2>Lista de tiendas</h2>
 
   <table class="table table-bordered table-hover">
     <thead>
     <tr>
       <th scope="col">Nombre</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Inventario</th>
+      <th scope="col">Direccion</th>
       <th scope="col">Editar</th>
       <th scope="col">Eliminar</th>
     </tr>
@@ -180,10 +179,10 @@
       <td th:text="${tiendas.nombre}"></td>
       <td th:text="${tiendas.direccion}"></td>
       <td>
-        <a class="btn btn-warning" th:href="@{/shop/edit/{id}(id=${tiendas.idTienda})}">Editar</a>
+        <a class="btn btn-warning" th:href="@{/tienda/edit/{id}(id=${tiendas.idTienda})}">Editar</a>
       </td>
       <td>
-        <form th:action="@{/shop/delete/{id}(id=${tiendas.idTienda})}" method="post" style="display:inline">
+        <form th:action="@{/tienda/delete/{id}(id=${tiendas.idTienda})}" method="post" style="display:inline">
           <button type="submit" class="btn btn-danger">Eliminar</button>
         </form>
       </td>
