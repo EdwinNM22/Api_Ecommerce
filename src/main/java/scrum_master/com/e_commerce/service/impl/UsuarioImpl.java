@@ -7,6 +7,7 @@ import scrum_master.com.e_commerce.entities.UsuarioEntity;
 import scrum_master.com.e_commerce.repository.UsuarioRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioImpl implements UsuarioService {
@@ -21,5 +22,32 @@ public class UsuarioImpl implements UsuarioService {
     @Override
     public UsuarioEntity save(UsuarioEntity usuario) {
         return usuarioRepository.save(usuario);
+    }
+
+    @Override
+    public Optional<UsuarioEntity> findById(Integer id) {
+        return usuarioRepository.findById(id);
+    }
+
+    @Override
+    public Optional<UsuarioEntity> findByEmail(String email) {
+        return usuarioRepository.findByEmail(email);
+    }
+
+    @Override
+    public Optional<UsuarioEntity> get(Integer id) {
+        return usuarioRepository.findById(id);
+    }
+
+    @Override
+    public void update(UsuarioEntity usuario) {
+        usuarioRepository.save(usuario);
+
+    }
+
+    @Override
+    public void delete(Integer id) {
+        usuarioRepository.deleteById(id);
+
     }
 }

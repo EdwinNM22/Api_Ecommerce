@@ -1,28 +1,27 @@
 package scrum_master.com.e_commerce.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import scrum_master.com.e_commerce.entities.UsuarioEntity;
 
 @Controller
-@RequestMapping("/usuario")
+@RequestMapping("/auth")
 public class LoginController {
 
     @GetMapping("/login")
     public String vistalogin() {
-        return "usuario/login";
+        return "auth/login";
     }
 
     @GetMapping("/registro")
-    public String vistaregistro() {
-        return "usuario/registro";
-    }
-
-    @GetMapping("/edit")
-    public String vistaedit() {
-        return "usuario/edit";
+    public String vistaregistro(Model model) {
+        model.addAttribute("usuario", new UsuarioEntity());
+        return "auth/registro";
     }
 }
+
 
 
 

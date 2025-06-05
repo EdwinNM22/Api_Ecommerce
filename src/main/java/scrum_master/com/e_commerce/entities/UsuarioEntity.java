@@ -19,14 +19,12 @@ public class UsuarioEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUsuario;
     private String nombre;
-    private String correo;
+    private String email;
     private String password;
-    private String Celular;
+    private String celular;
+    private int edad;
+    private String rol;
 
-    @ManyToOne
-    @JoinColumn(name = "idRol")
-    @JsonManagedReference
-    private RolEntity rol;
 
     @OneToMany(mappedBy = "usuario")
     @JsonBackReference
