@@ -17,7 +17,7 @@ public class HomeController {
 
     @GetMapping("/index") // Redirige a la pagina principal/
     public String mostrarIndex() {
-        return "home/index"; // nombre del archivo HTML dentro de templates/
+        return "home/index"; // nombre del archivo HTML dentro de tempeeelates/
     }
 
 }
