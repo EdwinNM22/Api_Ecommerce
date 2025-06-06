@@ -6,7 +6,7 @@ La API está construida utilizando **Spring Boot** con **Java POO**.
 ---
 
 ## 📅 Entrega
-🗓️ Fecha de entrega: **11/04/2025**
+🗓️ Fecha de entrega: **6/06/2025**
 
 ---
 
@@ -36,6 +36,11 @@ La API está construida utilizando **Spring Boot** con **Java POO**.
 **Mario Enrique Palma Miranda**
 
 ## ⚙️ Instrucciones de uso
+
+## Usuario y contraseña para entrar a la plataforma 
+
+correo: admin.example.com
+contraseña:123
 
 Antes de ejecutar el proyecto, asegúrese de configurar su base de datos con los archivos query en `/DbQuerys` ubicado en la raiz del proyecto 
 
