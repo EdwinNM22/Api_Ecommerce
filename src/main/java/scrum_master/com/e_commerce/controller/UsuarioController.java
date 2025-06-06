@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import scrum_master.com.e_commerce.DTO.InfoProductoDTO;
+import scrum_master.com.e_commerce.DTO.UsuarioDTO;
 import scrum_master.com.e_commerce.entities.ProductoEntity;
 import scrum_master.com.e_commerce.entities.UsuarioEntity;
 import scrum_master.com.e_commerce.service.UsuarioService;
@@ -38,11 +40,11 @@ public class UsuarioController {
     }
 
 
-
     @GetMapping("/info")
-    public String infoUsuarios(Model model) {
-        model.addAttribute("usuario", new UsuarioEntity());
-        return "auth/registro";
+    public String infoProducto(Model model) {
+        List<UsuarioDTO> info = usuarioService.obtenerInfoUsuarios();
+        model.addAttribute("info", info);
+        return "usuarios/info";
     }
 
     @PostMapping("/save")

@@ -2,6 +2,7 @@ package scrum_master.com.e_commerce.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import scrum_master.com.e_commerce.DTO.UsuarioDTO;
 import scrum_master.com.e_commerce.service.UsuarioService;
 import scrum_master.com.e_commerce.entities.UsuarioEntity;
 import scrum_master.com.e_commerce.repository.UsuarioRepository;
@@ -49,5 +50,10 @@ public class UsuarioImpl implements UsuarioService {
     public void delete(Integer id) {
         usuarioRepository.deleteById(id);
 
+    }
+
+    @Override
+    public List<UsuarioDTO> obtenerInfoUsuarios() {
+        return usuarioRepository.obtenerInfoUsuarios();
     }
 }
