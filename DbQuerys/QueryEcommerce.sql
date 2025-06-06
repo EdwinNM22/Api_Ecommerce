@@ -1,16 +1,12 @@
-CREATE TABLE Rol (
-    idRol INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(50) NOT NULL
-);
 
 CREATE TABLE Usuario (
     IdUsuario INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    correo VARCHAR(100) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
-    Celular VARCHAR(20),
-    idRol INT,
-    FOREIGN KEY (idRol) REFERENCES Rol(idRol)
+    celular VARCHAR(20),
+    rol VARCHAR(255) NOT NULL,
+    edad INT
 );
 
 CREATE TABLE Categoria (
