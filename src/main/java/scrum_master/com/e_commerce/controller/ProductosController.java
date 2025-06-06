@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import scrum_master.com.e_commerce.DTO.InfoProductoDTO;
 import scrum_master.com.e_commerce.entities.ProductoEntity;
 import scrum_master.com.e_commerce.service.ProductoService;
 
@@ -29,6 +30,13 @@ public class ProductosController {
     public String createproducto(Model model) {
         model.addAttribute("producto", new ProductoEntity());
         return "producto/create";
+    }
+
+    @GetMapping("/info")
+    public String infoProducto(Model model) {
+        List<InfoProductoDTO> productos = productoService.obtenerInfoProductos();
+        model.addAttribute("productos", productos);
+        return "producto/info";
     }
 
     @GetMapping("/edit")

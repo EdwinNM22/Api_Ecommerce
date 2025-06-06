@@ -154,38 +154,41 @@
 <div class="container" style="margin-top: 100px;">
   <!-- Page Heading/Breadcrumbs -->
   <h1 class="mt-4 mb-3">
-    Spring eCommerce <small>Productos</small>
+    Tiendas <small></small>
   </h1>
 
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/index">Home</a></li>
-    <li class="breadcrumb-item active">Ver Productos</li>
+    <li class="breadcrumb-item active">Usuarios</li>
   </ol>
 
-  <a class="btn btn-primary mb-3" href="/producto/create">Crear Producto</a>
-  <a class="btn btn-danger mb-3" href="/producto/info">Ver informacion de stock</a>
-  <h2>Productos</h2>
+  <a class="btn btn-primary mb-3" href="/auth/register">Usuarios</a>
+  <h2>Lista de usuarios</h2>
 
   <table class="table table-bordered table-hover">
     <thead>
     <tr>
       <th scope="col">Nombre</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Inventario</th>
+      <th scope="col">Email</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Rol</th>
       <th scope="col">Editar</th>
       <th scope="col">Eliminar</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="producto : ${productos}">
-      <td th:text="${producto.nombre}"></td>
-      <td th:text="${producto.precio}"></td>
-      <td th:text="${producto.stock}"></td>
+    <tr th:each="usuario : ${usuarios}">
+      <td th:text="${usuario.nombre}"></td>
+      <td th:text="${usuario.email}"></td>
+      <td th:text="${usuario.celular}"></td>
+      <td th:text="${usuario.edad}"></td>
+      <td th:text="${usuario.rol}"></td>
       <td>
-        <a class="btn btn-warning" th:href="@{/producto/edit/{id}(id=${producto.idProducto})}">Editar</a>
+        <a class="btn btn-warning" th:href="@{/usuarios/edit/{id}(id=${usuario.idUsuario})}">Editar</a>
       </td>
       <td>
-        <form th:action="@{/producto/delete/{id}(id=${producto.idProducto})}" method="post" style="display:inline">
+        <form th:action="@{/usuarios/delete/{id}(id=${usuario.idUsuario})}" method="post" style="display:inline">
           <button type="submit" class="btn btn-danger">Eliminar</button>
         </form>
       </td>
